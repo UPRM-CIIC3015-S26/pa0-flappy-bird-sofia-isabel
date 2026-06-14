@@ -58,6 +58,7 @@ pipe_speed = 3
 score = 0
 game_over = False
 game_started = False
+paused = False
 
 clock = pygame.time.Clock()
 
@@ -70,6 +71,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_p and game_started == True and game_over == False:
+                paused = not paused
             if event.key == pygame.K_SPACE:
                 if game_started == False:
                     game_started = True
@@ -89,7 +92,7 @@ while running:
                     game_started = True
                     pipe_height = random.randint(100, 400)
 
-    if game_started == True and game_over == False:
+    if game_started == True and game_over == False and paused == False:
         bird_velocity = bird_velocity + gravity
         bird_y = bird_y + bird_velocity
         pipe_x = pipe_x - pipe_speed
@@ -122,6 +125,10 @@ while running:
     pygame.draw.rect(screen, GREEN, (pipe_x, pipe_height + pipe_gap, pipe_width, 600))
     score_text = small_font.render(str(score), True, WHITE)
     screen.blit(score_text, (score_x, score_y))
+
+    if paused:
+        pause_text = small_font.render("PAUSED - Press P to continue", True, WHITE)
+        screen.blit(pause_text, (55, 250))
 
     if game_started == False: # Start UI -->
         title_text = big_font.render("Flappy Bird", True, WHITE)
