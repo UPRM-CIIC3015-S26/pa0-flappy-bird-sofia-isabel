@@ -25,5 +25,5 @@ The project is designed as an introductory programming assignment (PA0). Most of
 
 ## ⭐ Bonus Features (Optional)
 List and briefly describe any additional features or enhancements implemented beyond the basic requirements.
-- Bonus Feature 1
-- Bonus Feature 2
+- Bonus Feature 1 - Added a custom game over.It comes up when the player losses showing the game over text, the player's final score and instructions to restart by pressing the space bar.
+- Bonus Feature 2 - Added a pause feature.The player can pause the game by pressing p and press p again to continue.
