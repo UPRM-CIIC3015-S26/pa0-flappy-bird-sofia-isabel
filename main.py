@@ -129,9 +129,14 @@ while running:
         screen.blit(title_text, (title_x, title_y))
         screen.blit(instruction_text, (instruction_x, instruction_y))
 
-    if game_over: # GameOver UI -->
-        loss_text = small_font.render("Press Space to restart...", True, WHITE)
-        screen.blit(loss_text, (85, 200))
+    if game_over:
+        loss_text = small_font.render("Game Over!", True, WHITE)
+        restart_text = small_font.render("Press Space to restart...", True, WHITE)
+        final_score_text = small_font.render("Final Score: " + str(score), True, WHITE)
+
+        screen.blit(loss_text, (135, 180))
+        screen.blit(final_score_text, (105, 220))
+        screen.blit(restart_text, (85, 260))
 
     pygame.display.update()
     clock.tick(60)
