@@ -14,9 +14,9 @@ The project is designed as an introductory programming assignment (PA0). Most of
 ## 👥 Team Information
 
 ### Partner #1
-- **Name:**
-- **Student Number:**
-- **Email:**
+- **Name:Sofia I.Quintana Cortes**
+- **Student Number:802233251**
+- **Email:sofia.quintana1@upr.edu**
 
 ### Partner #2
 - **Name:**
