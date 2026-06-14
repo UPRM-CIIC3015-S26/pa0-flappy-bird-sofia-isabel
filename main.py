@@ -79,6 +79,7 @@ while running:
                     # After the bird crashes with a pipe the when spawning back the player it doesn't appear.
                     # It is your job to find why this is happening! (Hint: What variable stores the y coordinates
                     # of the bird)
+                    bird_y = 300
                     bird_velocity = 0
                     pipe_x = 400
                     score = 0
